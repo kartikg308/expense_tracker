@@ -39,11 +39,6 @@ class ExpenseProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void sortByTime({required bool ascending}) {
-    _expenses.sort((a, b) => ascending ? a.dateTime.compareTo(b.dateTime) : b.dateTime.compareTo(a.dateTime));
-    notifyListeners();
-  }
-
   void updateExpense(String id, Expense updatedExpense) {
     final index = _expenses.indexWhere((expense) => expense.id == id);
     if (index != -1) {

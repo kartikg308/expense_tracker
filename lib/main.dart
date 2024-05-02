@@ -33,8 +33,6 @@ Future<void> _requestPermissions() async {
   if (status.isGranted) {
     return;
   }
-
-  // Handle denied permissions
 }
 
 void scheduleNotifications(FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin) async {
@@ -50,7 +48,7 @@ void scheduleNotifications(FlutterLocalNotificationsPlugin flutterLocalNotificat
     0,
     'Record Your Expenses',
     'Keep up with your expense by tracking them timely',
-    RepeatInterval.everyMinute,
+    RepeatInterval.hourly,
     platformChannelSpecifics,
     androidAllowWhileIdle: true,
   );

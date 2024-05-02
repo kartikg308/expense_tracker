@@ -48,84 +48,75 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 8),
-                SizedBox(
-                  height: 150,
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Daily Expenses',
-                            style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                            ),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Daily Expenses',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            dailyExpenses.toStringAsFixed(2),
-                            style: const TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.w300,
-                            ),
+                        ),
+                        Text(
+                          dailyExpenses.toStringAsFixed(2),
+                          style: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w300,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 150,
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Weekly Expenses',
-                            style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                            ),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Weekly Expenses',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            weeklyExpenses.toStringAsFixed(2),
-                            style: const TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.w300,
-                            ),
+                        ),
+                        Text(
+                          weeklyExpenses.toStringAsFixed(2),
+                          style: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w300,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 150,
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Monthly Expenses',
-                            style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                            ),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Monthly Expenses',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            monthlyExpenses.toStringAsFixed(2),
-                            style: const TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.w300,
-                            ),
+                        ),
+                        Text(
+                          monthlyExpenses.toStringAsFixed(2),
+                          style: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w300,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -164,7 +155,13 @@ class HomePage extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddEditExpenseScreen(expense: expense)));
       },
-      title: Text(expense.description),
+      title: Text(
+        expense.description,
+        style: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

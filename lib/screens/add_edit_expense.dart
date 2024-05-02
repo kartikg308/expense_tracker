@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../data/expense_model.dart';
-import '../data/expense_provider.dart'; // Import your ExpenseProvider class
+import '../data/expense_provider.dart';
 
 class AddEditExpenseScreen extends StatefulWidget {
   final Expense? expense;
