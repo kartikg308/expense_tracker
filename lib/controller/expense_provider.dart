@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'expense_model.dart';
+import '../model/expense_model.dart';
 
 class ExpenseProvider extends ChangeNotifier {
   late SharedPreferences _prefs;

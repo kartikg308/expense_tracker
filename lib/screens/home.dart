@@ -3,8 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import 'add_edit_expense.dart';
-import '../data/expense_model.dart';
-import '../data/expense_provider.dart';
+import '../model/expense_model.dart';
+import '../controller/expense_provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
